@@ -8,6 +8,8 @@ import com.ecommerce.models.User;
 @Repository
 public interface UserRepository extends MongoRepository<User, String> {
 
-	User findByEmail(String customername);
+	User findByLoginId(String customername);
+
+	User findByLoginIdAndPassword(String userName, String password);
 
 }

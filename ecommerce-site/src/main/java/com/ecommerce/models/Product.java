@@ -18,6 +18,15 @@ public class Product {
 	private long price;
 	private List<String> features;
 	private String status;
+	private long productStock;
+
+	public long getProductStock() {
+		return productStock;
+	}
+
+	public void setProductStock(long productStock) {
+		this.productStock = productStock;
+	}
 
 	public String getId() {
 		return id;

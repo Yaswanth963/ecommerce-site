@@ -14,46 +14,48 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.ecommerce.constants.EcommerceConstants;
 import com.ecommerce.models.User;
-import com.ecommerce.repositories.UserRepository;
 import com.ecommerce.reqresModel.UserLoginRequest;
 import com.ecommerce.reqresModel.UserResponse;
+import com.ecommerce.services.UserService;
 
 @RestController
 @RequestMapping("/api" + EcommerceConstants.APP_VERSION + "/shopping")
 public class UserController {
 
 	@Autowired
-	UserRepository userRepository;
+	UserService userService;
 
 	@PostMapping("/register")
 	public ResponseEntity<User> signup(@RequestBody User user) {
-		userRepository.save(user);
-		return ResponseEntity.ok(user);
+		if (userService.validUser(user)) {
+			userService.addUser(user);
+			return ResponseEntity.ok(user);
+		}
+		return ResponseEntity.badRequest().build();
 	}
 
 	@GetMapping("/getUser/{userId}")
 	public ResponseEntity<Optional<User>> getUser(@PathVariable String userId) {
-		Optional<User> user = Optional.ofNullable(userRepository.findById(userId)).orElse(null);
-		if (user == null)
-			return (ResponseEntity<Optional<User>>) ResponseEntity.badRequest();
+		Optional<User> user = userService.fetchUser(userId);
+		if (user.isEmpty())
+			return ResponseEntity.badRequest().build();
 		return ResponseEntity.ok(user);
 	}
 
+	//IMPORTANT: Store the passwords in encrypted form 
 	@PostMapping("/login")
 	public ResponseEntity<UserResponse> userLogin(@RequestBody UserLoginRequest loginRequest) {
-		if (validUser(loginRequest))
+		if (userService.validLogin(loginRequest))
 			return ResponseEntity.ok(new UserResponse(true, "User logged in successfuly"));
 		return ResponseEntity.ok((new UserResponse(false, "Invalid username or password")));
 	}
 
 	@GetMapping("{customername}/forgot")
-	public ResponseEntity<String> forgotPassword(@RequestParam String password, @PathVariable String customername) {
-		User user = userRepository.findByEmail(customername);
-		return ResponseEntity.ok("Password has been changed successfully...");
+	public ResponseEntity<String> forgotPassword(@RequestParam String loginId) {
+		User user = userService.fetchUserLogin(loginId);
+		if (user == null)
+			return ResponseEntity.badRequest().build();
+		return ResponseEntity.ok("Your password has been sent to your mail...");
 	}
 
-	private boolean validUser(UserLoginRequest loginRequest) {
-		// To be implemented
-		return true;
-	}
 }
