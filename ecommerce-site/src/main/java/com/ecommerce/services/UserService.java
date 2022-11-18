@@ -3,6 +3,9 @@ package com.ecommerce.services;
 import java.util.List;
 import java.util.Optional;
 
+import org.json.simple.JSONArray;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,6 +20,7 @@ public class UserService {
 	UserRepository userRepository;
 
 	public void addUser(User user) {
+		LOG.info("User with id: " + user.getLoginId() + " added");
 		userRepository.save(user);
 	}
 
@@ -26,12 +30,24 @@ public class UserService {
 	}
 
 	public List<User> fetchAllUsers() {
-		return userRepository.findAll();
+		List<User> users = userRepository.findAll();
+		String usrs = JSONArray.toJSONString(users);
+		LOG.info(usrs);
+		return users;
 	}
 
 	public boolean validLogin(UserLoginRequest loginRequest) {
 		User user = userRepository.findByLoginIdAndPassword(loginRequest.getUserName(), loginRequest.getPassword());
+		if (user != null)
+			LOG.info("Valid User");
+		else
+			LOG.info("Invalid User");
 		return user != null;
+	}
+
+	public User fetchUserLogin(String loginId) {
+		LOG.info("Fetching user " + loginId);
+		return userRepository.findByLoginId(loginId);
 	}
 
 	public boolean validUser(User user) {
@@ -40,7 +56,6 @@ public class UserService {
 				.anyMatch(usr -> usr.getLoginId().equals(user.getLoginId()) || usr.getEmail().equals(user.getEmail()));
 	}
 
-	public User fetchUserLogin(String loginId) {
-		return userRepository.findByLoginId(loginId);
-	}
+	private static final Logger LOG = LoggerFactory.getLogger(UserService.class);
+
 }
