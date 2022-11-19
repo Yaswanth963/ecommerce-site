@@ -24,56 +24,63 @@ public class Product {
 		return productStock;
 	}
 
-	public void setProductStock(long productStock) {
+	public Product setProductStock(long productStock) {
 		this.productStock = productStock;
+		return this;
 	}
 
 	public String getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public Product setId(String id) {
 		this.id = id;
+		return this;
 	}
 
 	public String getProductName() {
 		return productName;
 	}
 
-	public void setProductName(String productName) {
+	public Product setProductName(String productName) {
 		this.productName = productName;
+		return this;
 	}
 
 	public String getProductDescription() {
 		return productDescription;
 	}
 
-	public void setProductDescription(String productDescription) {
+	public Product setProductDescription(String productDescription) {
 		this.productDescription = productDescription;
+		return this;
 	}
 
 	public long getPrice() {
 		return price;
 	}
 
-	public void setPrice(long price) {
+	public Product setPrice(long price) {
 		this.price = price;
+		return this;
 	}
 
 	public List<String> getFeatures() {
 		return features;
 	}
 
-	public void setFeatures(List<String> features) {
+	public Product setFeatures(List<String> features) {
 		this.features = features;
+		return this;
 	}
 
 	public String getStatus() {
 		return status;
 	}
 
-	public void setStatus(String status) {
+	public Product setStatus(String status) {
 		this.status = status;
+		return this;
 	}
 
 }

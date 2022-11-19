@@ -53,9 +53,16 @@ public class ProductService {
 		Product product = fetchProductWithName(productName);
 		long remainStock = product.getProductStock() - itemCount;
 		product.setProductStock(remainStock);
+		productRepository.save(product);
 		kafkaMessenger.sendMessage(productName, remainStock);
-		LOG.info("Order Placed: { Product: " + productName + "Item count: " + itemCount + " }");
+		LOG.info("Order Placed: { Product: " + productName + ", Item count: " + itemCount + " }");
 		LOG.info("Remaining stock: " + remainStock);
+	}
+
+	public void updatetatus(String productName, String status) {
+		Product product = fetchProductWithName(productName);
+		product.setStatus(status);
+		productRepository.save(product);
 	}
 
 	public boolean validProduct(Product product) {
