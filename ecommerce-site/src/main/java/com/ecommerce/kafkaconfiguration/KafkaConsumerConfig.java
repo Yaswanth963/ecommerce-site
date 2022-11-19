@@ -6,17 +6,16 @@ import java.util.Map;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.kafka.clients.CommonClientConfigs;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
+import org.apache.kafka.common.serialization.StringDeserializer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.kafka.config.ConcurrentKafkaListenerContainerFactory;
 import org.springframework.kafka.core.ConsumerFactory;
 import org.springframework.kafka.core.DefaultKafkaConsumerFactory;
 
-import com.fasterxml.jackson.databind.deser.std.StringDeserializer;
-
 /***
- * This abstract class needs to be extended and the following annotations needs to be
- * added in the extending class.
+ * This abstract class needs to be extended and the following annotations needs
+ * to be added in the extending class.
  *
  */
 public abstract class KafkaConsumerConfig {

@@ -76,7 +76,7 @@ public class ProductController {
 		return ResponseEntity.ok(product.getProductStock());
 	}
 	
-	@PostMapping("placeOrder/{productName}/{itemCount}")
+	@PostMapping("placeOrder/{productName}")
 	public ResponseEntity<String> placeOrder(@PathVariable String productName,@RequestParam long itemCount) {
 		productService.placeOrder(productName,itemCount);
 		return ResponseEntity.ok("Order Placed");
