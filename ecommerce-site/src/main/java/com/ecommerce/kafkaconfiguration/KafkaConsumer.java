@@ -5,7 +5,13 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.kafka.annotation.EnableKafka;
 import org.springframework.kafka.config.ConcurrentKafkaListenerContainerFactory;
 import org.springframework.kafka.core.ConsumerFactory;
-
+/**
+ * 
+ * @author yaswanth.perumalla
+ * 
+ * This is Kafka consumer
+ *
+ */
 @EnableKafka
 @Configuration
 public class KafkaConsumer extends KafkaConsumerConfig {

@@ -13,6 +13,13 @@ import com.ecommerce.models.Product;
 import com.ecommerce.repositories.ProductRepository;
 import com.ecommerce.util.KafkaMessenger;
 
+/**
+ * 
+ * @author yaswanth.perumalla
+ * 
+ *         Service for product api's
+ *
+ */
 @Service
 public class ProductService {
 

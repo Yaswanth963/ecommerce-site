@@ -8,6 +8,14 @@ import com.ecommerce.mapper.DataMapper;
 import com.ecommerce.reqresModel.KafkaMessage;
 import com.ecommerce.services.ProductService;
 
+/**
+ * 
+ * @author yaswanth.perumalla
+ * 
+ *         This is a parent class that listens to all it's child class messages
+ *         and update the product status from database
+ *
+ */
 public abstract class UserListener {
 
 	@Autowired

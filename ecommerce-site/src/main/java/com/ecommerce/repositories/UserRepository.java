@@ -5,6 +5,13 @@ import org.springframework.stereotype.Repository;
 
 import com.ecommerce.models.User;
 
+/**
+ * 
+ * @author yaswanth.perumalla
+ * 
+ *         user Repository
+ *
+ */
 @Repository
 public interface UserRepository extends MongoRepository<User, String> {
 

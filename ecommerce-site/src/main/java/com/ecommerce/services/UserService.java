@@ -13,6 +13,13 @@ import com.ecommerce.models.User;
 import com.ecommerce.repositories.UserRepository;
 import com.ecommerce.reqresModel.UserLoginRequest;
 
+/**
+ * 
+ * @author yaswanth.perumalla
+ * 
+ *         Service for User api's
+ *
+ */
 @Service
 public class UserService {
 

@@ -13,9 +13,10 @@ import org.springframework.kafka.config.ConcurrentKafkaListenerContainerFactory;
 import org.springframework.kafka.core.ConsumerFactory;
 import org.springframework.kafka.core.DefaultKafkaConsumerFactory;
 
-/***
- * This abstract class needs to be extended and the following annotations needs
- * to be added in the extending class.
+/**
+ * 
+ * @author yaswanth.perumalla This abstract class needs to be extended and the
+ *         following annotations needs to be added in the extending class.
  *
  */
 public abstract class KafkaConsumerConfig {
@@ -61,11 +62,21 @@ public abstract class KafkaConsumerConfig {
 		return env.getProperty("kafka.consumer.group-id");
 	}
 
+	/**
+	 * This method can be overridden to change ssl protocol
+	 * 
+	 * @return
+	 */
 	private String securityProtocol() {
 		String protocol = env.getProperty("kafka.ssl.protocol");
 		return StringUtils.isNoneEmpty(protocol) ? protocol : null;
 	}
 
+	/**
+	 * This method can be overridden to alter security
+	 * 
+	 * @return
+	 */
 	private boolean isSecurityEnabled() {
 		return "true".equalsIgnoreCase(env.getProperty("kafka.ssl.enabled"));
 	}

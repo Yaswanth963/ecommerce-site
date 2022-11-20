@@ -6,6 +6,13 @@ import javax.persistence.Id;
 
 import org.springframework.data.mongodb.core.mapping.Document;
 
+/**
+ * 
+ * @author yaswanth.perumalla
+ * 
+ *         Product model class
+ *
+ */
 @Document
 public class Product {
 	public Product() {

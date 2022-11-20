@@ -4,6 +4,13 @@ import javax.persistence.Id;
 
 import org.springframework.data.mongodb.core.mapping.Document;
 
+/**
+ * 
+ * @author yaswanth.perumalla
+ * 
+ *         User model class
+ *
+ */
 @Document
 public class User {
 	public User() {

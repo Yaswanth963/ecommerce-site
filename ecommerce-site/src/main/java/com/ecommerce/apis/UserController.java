@@ -17,7 +17,13 @@ import com.ecommerce.models.User;
 import com.ecommerce.reqresModel.UserLoginRequest;
 import com.ecommerce.reqresModel.UserResponse;
 import com.ecommerce.services.UserService;
-
+/**
+ * 
+ * @author yaswanth.perumalla
+ * 
+ * These are User api's
+ *
+ */
 @RestController
 @RequestMapping("/api" + EcommerceConstants.APP_VERSION + "/shopping")
 public class UserController {

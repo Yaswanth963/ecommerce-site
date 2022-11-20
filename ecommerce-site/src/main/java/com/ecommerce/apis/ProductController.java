@@ -18,7 +18,14 @@ import org.springframework.web.bind.annotation.RestController;
 import com.ecommerce.constants.EcommerceConstants;
 import com.ecommerce.models.Product;
 import com.ecommerce.services.ProductService;
-
+/**
+ * 
+ * @author yaswanth.perumalla
+ * 
+ * 
+ * These are product api's 
+ *
+ */
 @RestController
 @RequestMapping("/api" + EcommerceConstants.APP_VERSION + "/shopping")
 public class ProductController {

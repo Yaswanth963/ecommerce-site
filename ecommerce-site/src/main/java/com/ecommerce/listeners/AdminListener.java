@@ -5,6 +5,14 @@ import org.springframework.stereotype.Service;
 
 import com.ecommerce.constants.KafkaTopics;
 
+/**
+ * 
+ * @author yaswanth.perumalla
+ * 
+ *         Admin Listener listens to a topic and send the message to it's
+ *         parent's class
+ *
+ */
 @Service
 public class AdminListener extends UserListener {
 	@KafkaListener(topics = KafkaTopics.KAFKA_TOPIC)

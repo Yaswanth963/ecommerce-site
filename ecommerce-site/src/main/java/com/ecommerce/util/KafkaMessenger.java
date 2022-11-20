@@ -10,6 +10,13 @@ import com.ecommerce.constants.KafkaTopics;
 import com.ecommerce.mapper.DataMapper;
 import com.ecommerce.reqresModel.KafkaMessage;
 
+/**
+ * 
+ * @author yaswanth.perumalla
+ * 
+ *         Messenger class that sends data to kafka topics
+ *
+ */
 @Component
 public class KafkaMessenger {
 

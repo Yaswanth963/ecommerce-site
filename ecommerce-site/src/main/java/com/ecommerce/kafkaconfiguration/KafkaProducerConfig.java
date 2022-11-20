@@ -15,9 +15,12 @@ import org.springframework.kafka.core.DefaultKafkaProducerFactory;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.kafka.core.ProducerFactory;
 
-/***
- * This abstract class needs to be extended and the following annotation needs
- * to be added in the extending class.
+/**
+ * 
+ * @author yaswanth.perumalla
+ * 
+ *         This abstract class needs to be extended and the following annotation
+ *         needs to be added in the extending class.
  *
  */
 public abstract class KafkaProducerConfig {

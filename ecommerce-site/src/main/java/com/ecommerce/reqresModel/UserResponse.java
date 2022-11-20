@@ -1,5 +1,12 @@
 package com.ecommerce.reqresModel;
 
+/**
+ * 
+ * @author yaswanth.perumalla
+ * 
+ *         User response data format
+ *
+ */
 public class UserResponse {
 
 	private boolean success;

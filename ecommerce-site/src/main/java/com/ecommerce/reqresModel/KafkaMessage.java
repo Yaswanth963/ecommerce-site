@@ -1,5 +1,12 @@
 package com.ecommerce.reqresModel;
 
+/**
+ * 
+ * @author yaswanth.perumalla
+ * 
+ *         Kafka Message format
+ *
+ */
 public class KafkaMessage {
 
 	public KafkaMessage(String productName, String status) {

@@ -1,5 +1,12 @@
 package com.ecommerce.reqresModel;
 
+/**
+ * 
+ * @author yaswanth.perumalla
+ * 
+ *         User login data request format
+ *
+ */
 public class UserLoginRequest {
 	public UserLoginRequest() {
 	}

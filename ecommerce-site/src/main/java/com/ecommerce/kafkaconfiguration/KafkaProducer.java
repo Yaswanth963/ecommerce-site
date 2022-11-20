@@ -6,6 +6,13 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.kafka.core.ProducerFactory;
 
+/**
+ * 
+ * @author yaswanth.perumalla
+ * 
+ *         This is a Kafka Producer
+ *
+ */
 
 @Configuration
 public class KafkaProducer extends KafkaProducerConfig {
