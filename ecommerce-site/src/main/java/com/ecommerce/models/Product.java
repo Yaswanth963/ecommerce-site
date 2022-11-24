@@ -8,7 +8,6 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 /**
  * 
- * @author yaswanth.perumalla
  * 
  *         Product model class
  *

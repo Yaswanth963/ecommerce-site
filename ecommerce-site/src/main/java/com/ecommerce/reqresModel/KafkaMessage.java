@@ -2,7 +2,6 @@ package com.ecommerce.reqresModel;
 
 /**
  * 
- * @author yaswanth.perumalla
  * 
  *         Kafka Message format
  *

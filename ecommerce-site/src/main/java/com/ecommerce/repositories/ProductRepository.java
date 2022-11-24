@@ -7,7 +7,7 @@ import com.ecommerce.models.Product;
 
 /**
  * 
- * @author yaswanth.perumalla Product repository
+ * Product repository
  *
  */
 @Repository

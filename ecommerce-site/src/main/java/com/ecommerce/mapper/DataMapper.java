@@ -8,7 +8,6 @@ import com.google.gson.Gson;
 
 /**
  * 
- * @author yaswanth.perumalla
  * 
  *         A mapper class that maps data from one format to other
  *

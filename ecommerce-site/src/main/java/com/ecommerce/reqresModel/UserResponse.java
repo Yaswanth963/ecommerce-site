@@ -2,7 +2,6 @@ package com.ecommerce.reqresModel;
 
 /**
  * 
- * @author yaswanth.perumalla
  * 
  *         User response data format
  *

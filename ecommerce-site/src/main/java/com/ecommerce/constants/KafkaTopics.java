@@ -1,7 +1,6 @@
 package com.ecommerce.constants;
 /**
  * 
- * @author yaswanth.perumalla
  * 
  * These are the kafka topics used in this application 
  *

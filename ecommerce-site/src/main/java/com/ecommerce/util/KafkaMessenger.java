@@ -12,7 +12,6 @@ import com.ecommerce.reqresModel.KafkaMessage;
 
 /**
  * 
- * @author yaswanth.perumalla
  * 
  *         Messenger class that sends data to kafka topics
  *

@@ -10,7 +10,6 @@ import com.ecommerce.services.ProductService;
 
 /**
  * 
- * @author yaswanth.perumalla
  * 
  *         This is a parent class that listens to all it's child class messages
  *         and update the product status from database

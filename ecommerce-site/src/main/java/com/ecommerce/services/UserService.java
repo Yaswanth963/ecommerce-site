@@ -15,7 +15,6 @@ import com.ecommerce.reqresModel.UserLoginRequest;
 
 /**
  * 
- * @author yaswanth.perumalla
  * 
  *         Service for User api's
  *

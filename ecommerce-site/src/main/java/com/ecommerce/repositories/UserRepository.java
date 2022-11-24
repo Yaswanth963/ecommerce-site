@@ -7,7 +7,6 @@ import com.ecommerce.models.User;
 
 /**
  * 
- * @author yaswanth.perumalla
  * 
  *         user Repository
  *

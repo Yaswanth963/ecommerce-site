@@ -6,7 +6,6 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 /**
  * 
- * @author yaswanth.perumalla
  * 
  *         User model class
  *

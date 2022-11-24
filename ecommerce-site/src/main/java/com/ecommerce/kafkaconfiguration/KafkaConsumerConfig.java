@@ -15,7 +15,7 @@ import org.springframework.kafka.core.DefaultKafkaConsumerFactory;
 
 /**
  * 
- * @author yaswanth.perumalla This abstract class needs to be extended and the
+ * This abstract class needs to be extended and the
  *         following annotations needs to be added in the extending class.
  *
  */

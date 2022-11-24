@@ -8,7 +8,6 @@ import org.springframework.kafka.core.ProducerFactory;
 
 /**
  * 
- * @author yaswanth.perumalla
  * 
  *         This is a Kafka Producer
  *

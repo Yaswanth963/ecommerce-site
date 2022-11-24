@@ -17,7 +17,6 @@ import org.springframework.kafka.core.ProducerFactory;
 
 /**
  * 
- * @author yaswanth.perumalla
  * 
  *         This abstract class needs to be extended and the following annotation
  *         needs to be added in the extending class.

@@ -19,7 +19,6 @@ import com.ecommerce.reqresModel.UserResponse;
 import com.ecommerce.services.UserService;
 /**
  * 
- * @author yaswanth.perumalla
  * 
  * These are User api's
  *

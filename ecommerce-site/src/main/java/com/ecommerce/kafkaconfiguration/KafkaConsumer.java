@@ -7,7 +7,6 @@ import org.springframework.kafka.config.ConcurrentKafkaListenerContainerFactory;
 import org.springframework.kafka.core.ConsumerFactory;
 /**
  * 
- * @author yaswanth.perumalla
  * 
  * This is Kafka consumer
  *

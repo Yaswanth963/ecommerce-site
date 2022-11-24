@@ -20,7 +20,6 @@ import com.ecommerce.models.Product;
 import com.ecommerce.services.ProductService;
 /**
  * 
- * @author yaswanth.perumalla
  * 
  * 
  * These are product api's 

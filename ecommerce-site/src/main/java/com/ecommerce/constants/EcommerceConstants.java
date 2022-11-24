@@ -1,7 +1,6 @@
 package com.ecommerce.constants;
 /**
  * 
- * @author yaswanth.perumalla
  * 
  * These are the constants used in this application
  *
